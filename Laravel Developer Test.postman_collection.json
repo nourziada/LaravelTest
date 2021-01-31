@@ -1,0 +1,80 @@
+{
+	"info": {
+		"_postman_id": "5677feca-2367-403f-aded-85bde0997048",
+		"name": "Laravel Developer Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Prank Categories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/prank-categories?page=1&limit=1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"prank-categories"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "slug",
+							"value": "new-prank-calls",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Prank Ideas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/prank-ideas?page=2&limit=10&category_slug=view-all-pranks",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"prank-ideas"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "2"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						},
+						{
+							"key": "category_slug",
+							"value": "view-all-pranks"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://laraveltest.test"
+		}
+	]
+}
